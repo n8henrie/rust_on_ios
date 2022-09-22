@@ -18,6 +18,11 @@ You should be able to see the `print`ed output in the XCode console.
 Additionally, you should be able to see some output generated in Rust on the
 opening screen in the iOS Simulator.
 
+Another good read on the topic is
+<https://blog.mozilla.org/data/2022/01/31/this-week-in-glean-building-and-deploying-a-rust-library-on-ios/>;
+it suggests a cleaner workaround of dynamically setting the library search
+path.
+
 ## Troubleshooting:
 
 - I made a `Makefile` to for reproducibility, but running `make` from XCode
