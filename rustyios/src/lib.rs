@@ -16,7 +16,7 @@ pub extern "C" fn add_numbers(x: c_int, y: c_int) -> c_longlong {
 
 #[no_mangle]
 pub unsafe extern "C" fn string_length(sz_msg: *const c_char) -> c_ulong {
-    let slice = unsafe { CStr::from_ptr(sz_msg) };
+    let slice = CStr::from_ptr(sz_msg);
     slice.to_bytes().len() as c_ulong
 }
 
@@ -45,9 +45,9 @@ pub unsafe extern "C" fn leven(
     s1: *const c_char,
     s2: *const c_char,
 ) -> c_ulong {
-    let s1 = unsafe { CStr::from_ptr(s1) };
+    let s1 = CStr::from_ptr(s1);
     let s1 = s1.to_str().unwrap();
-    let s2 = unsafe { CStr::from_ptr(s2) };
+    let s2 = CStr::from_ptr(s2);
     let s2 = s2.to_str().unwrap();
     (s1.len() + s2.len()) as c_ulong
 }
