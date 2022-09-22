@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6085D30728DCCED70013CB5E /* librustyios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6085D30628DCCED70013CB5E /* librustyios.a */; };
 		60A8D73528DCC46A001EC858 /* rust_on_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8D73428DCC46A001EC858 /* rust_on_iosApp.swift */; };
 		60A8D73728DCC46A001EC858 /* rust_on_iosDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8D73628DCC46A001EC858 /* rust_on_iosDocument.swift */; };
 		60A8D73928DCC46A001EC858 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8D73828DCC46A001EC858 /* ContentView.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6085D30128DCCB3A0013CB5E /* librustyios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustyios.a; path = rustyios/target/librustyios.a; sourceTree = "<group>"; };
+		6085D30628DCCED70013CB5E /* librustyios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustyios.a; path = "rustyios/target/aarch64-apple-ios-sim/debug/librustyios.a"; sourceTree = "<group>"; };
+		6085D30828DCDAC70013CB5E /* rustyios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rustyios.h; path = rustyios/target/rustyios.h; sourceTree = SOURCE_ROOT; };
 		60A8D73128DCC46A001EC858 /* rust_on_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rust_on_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8D73428DCC46A001EC858 /* rust_on_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rust_on_iosApp.swift; sourceTree = "<group>"; };
 		60A8D73628DCC46A001EC858 /* rust_on_iosDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rust_on_iosDocument.swift; sourceTree = "<group>"; };
@@ -47,6 +51,9 @@
 		60A8D74E28DCC46C001EC858 /* rust_on_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rust_on_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8D75228DCC46C001EC858 /* rust_on_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rust_on_iosUITests.swift; sourceTree = "<group>"; };
 		60A8D75428DCC46C001EC858 /* rust_on_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rust_on_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60A8D76128DCC55B001EC858 /* rust_on_ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rust_on_ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		60A8D76628DCC7C2001EC858 /* librustyios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustyios.a; path = "rustyios/target/aarch64-apple-ios/debug/librustyios.a"; sourceTree = "<group>"; };
+		60A8D76828DCC895001EC858 /* librustyios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustyios.a; path = "rustyios/target/x86_64-apple-ios/debug/librustyios.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6085D30728DCCED70013CB5E /* librustyios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				60A8D74728DCC46C001EC858 /* rust_on_iosTests */,
 				60A8D75128DCC46C001EC858 /* rust_on_iosUITests */,
 				60A8D73228DCC46A001EC858 /* Products */,
+				60A8D76528DCC7C2001EC858 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,8 @@
 				60A8D73A28DCC46C001EC858 /* Assets.xcassets */,
 				60A8D73F28DCC46C001EC858 /* Info.plist */,
 				60A8D73C28DCC46C001EC858 /* Preview Content */,
+				60A8D76128DCC55B001EC858 /* rust_on_ios-Bridging-Header.h */,
+				6085D30828DCDAC70013CB5E /* rustyios.h */,
 			);
 			path = rust_on_ios;
 			sourceTree = "<group>";
@@ -132,6 +143,17 @@
 			path = rust_on_iosUITests;
 			sourceTree = "<group>";
 		};
+		60A8D76528DCC7C2001EC858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6085D30628DCCED70013CB5E /* librustyios.a */,
+				6085D30128DCCB3A0013CB5E /* librustyios.a */,
+				60A8D76828DCC895001EC858 /* librustyios.a */,
+				60A8D76628DCC7C2001EC858 /* librustyios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60A8D75828DCC46C001EC858 /* Build configuration list for PBXNativeTarget "rust_on_ios" */;
 			buildPhases = (
+				6085D30928DCDCDD0013CB5E /* ShellScript */,
 				60A8D72D28DCC46A001EC858 /* Sources */,
 				60A8D72E28DCC46A001EC858 /* Frameworks */,
 				60A8D72F28DCC46A001EC858 /* Resources */,
@@ -200,6 +223,7 @@
 				TargetAttributes = {
 					60A8D73028DCC46A001EC858 = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 					60A8D74328DCC46C001EC858 = {
 						CreatedOnToolsVersion = 14.0;
@@ -256,6 +280,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6085D30928DCDCDD0013CB5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/rustyios/src/lib.rs",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/rustyios/target/librustyios.a",
+				"$(SRCROOT)/rustyios/target/rustyios.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /opt/homebrew/bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Use GNU make\n# https://unix.stackexchange.com/questions/11530/adding-directory-to-path-through-makefile\n\nexport PATH=/opt/homebrew/opt/make/libexec/gnubin:${HOME}/.cargo/bin:$PATH\n\n# https://github.com/TimNN/cargo-lipo/issues/41\nexport LIBRARY_PATH=\"${DEVELOPER_SDK_DIR}/MacOSX.sdk/usr/lib:${LIBRARY_PATH:-}\"\n\ncd rustyios\n\ncase \"${CONFIGURATION}\" in\n    Debug)\n        make\n    ;;\n    Release)\n        make release\n    ;;\nesac\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60A8D72D28DCC46A001EC858 /* Sources */ = {
@@ -420,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rust_on_ios/Preview Content\"";
@@ -437,10 +485,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rustyios/target/aarch64-apple-ios-sim/debug",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.n8henrie.rust-on-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "rust_on_ios/rust_on_ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rust_on_ios/Preview Content\"";
@@ -468,10 +523,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rustyios/target/aarch64-apple-ios-sim/debug",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.n8henrie.rust-on-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "rust_on_ios/rust_on_ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -17,7 +17,49 @@ extension UTType {
 struct rust_on_iosDocument: FileDocument {
     var text: String
 
-    init(text: String = "Hello, world!") {
+    init(text: String = String.init(cString: hello_rust())) {
+
+        let answer = add_numbers(15, 25)
+        print("The answer is: \(answer)")
+        let string = "for an anvil, this library sure is lightweight"
+        print("The length is: \(string_length(string))")
+
+        let colour = what_colour()
+        if colour == Green {
+            print("go")
+        } else {
+            print("stop")
+        }
+
+        let word1 = "agreeable"
+        let word2 = "affable"
+        let distance = leven(word1, word2)
+        print("Length: \(distance)")
+
+        print("Adding numbers with callback...")
+        add_numbers_cb(4, 5) {
+            answer in
+            print("The answer is \(answer)")
+        }
+        print("Finished adding numbers!")
+
+        countdown() {
+            (timer: Int32) in
+
+            // Uh oh
+            if timer == 7 {
+                print("Aborting!")
+                return Abort
+            }
+
+            if timer > 0 {
+                print("\(timer) seconds to go...")
+            } else {
+                print("Houston we have liftoff")
+            }
+            return Continue
+        }
+
         self.text = text
     }
 

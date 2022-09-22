@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Binding var document: rust_on_iosDocument
-
+    
     var body: some View {
         TextEditor(text: $document.text)
     }
