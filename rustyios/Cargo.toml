@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ferris-says = "0.1"
+ferris-says = "0.2"
 
 [lib]
 crate-type = ["staticlib"]
